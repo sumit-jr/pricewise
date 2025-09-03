@@ -41,8 +41,6 @@ git clone https://github.com/sumit-jr/pricewise.git
 cd pricewise
 ```
 
-## ⚡ Installation Steps
-
 1. **Ensure you have Node.js installed**  
    If not, download it from the [Node.js official site](https://nodejs.org/en/download/).
 
