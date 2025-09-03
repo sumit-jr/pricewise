@@ -1,53 +1,82 @@
-# Installation
+# 💰 Pricewise – Amazon Price Tracker
 
-Follow these steps to install and run the project:
+A **full-stack web application** built with **Next.js, TailwindCSS, MongoDB, and Node.js**, that tracks product prices on Amazon and notifies users of price drops.  
+The app scrapes product details, stores them in MongoDB, and uses scheduled cron jobs + email notifications to keep users updated.  
 
-1. **Clone the repository**
+---
 
-   Open your terminal and run the following command to clone the repository:
+## 🚀 Features
 
+- 🔍 **Amazon Product Scraping** – Fetches product details (title, image, price, etc.).  
+- 💾 **MongoDB Database** – Stores product information and user subscriptions.  
+- ⏰ **Cron Jobs** – Automated background tasks for checking price changes.  
+- 📧 **Email Notifications** – Alerts users when product prices drop.  
+- 🎨 **TailwindCSS Styling** – Responsive, modern UI design.  
+- ⚡ **Next.js (App Router)** – Fast, server-rendered React application.  
+
+---
+
+## 📂 Project Structure
+
+```text
+├── app/                  # Next.js App Router pages
+├── components/           # UI Components
+├── lib/                  # Database and scraping utilities
+├── public/               # Static assets
+├── types/                # TypeScript type definitions
+├── .env                  # Environment variables
+├── next.config.js        # Next.js configuration
+├── package.json          # Dependencies
+├── tailwind.config.ts    # TailwindCSS configuration
+├── tsconfig.json         # TypeScript configuration
+└── README.md             # Documentation
+```
+## ⚡ Installation
+
+Follow these steps to install and run the project locally:
+
+### Clone the repository
+```bash
+git clone https://github.com/sumit-jr/pricewise.git
+cd pricewise
+```
+
+## ⚡ Installation Steps
+
+1. **Ensure you have Node.js installed**  
+   If not, download it from the [Node.js official site](https://nodejs.org/en/download/).
+
+2. **Install dependencies**
    ```bash
-   git clone https://github.com/sumit-jr/pricewise.git
+   npm install
    ```
 
-2. **Navigate to the project directory**
+## 🖋 Install Required Fonts
+The project uses **Inter** and **Space Grotesk** fonts, available on [Google Fonts](https://fonts.google.com/).
 
-   ```bash
-   cd pricewise
-   ```
+---
 
-3. **Install Node.js**
+## ⚙️ Set Up Environment Variables
+Create a `.env` file in the root directory and add your MongoDB connection string:
 
-   The project requires Node.js to run. If you don't have it installed, you can download it from [here](https://nodejs.org/en/download/).
+```env
+MONGODB_URI=your_mongodb_uri
+```
 
-4. **Install the required packages**
+## ⚡ Start the Server
+```bash
+npm run start
+```
 
-   The project requires several packages to be installed. Run the following command to install them:
+## 🛠 Tech Stack
 
-   ```bash
-   npm i
-   ```
+- **Frontend:** Next.js, React, TailwindCSS  
+- **Backend:** Node.js, MongoDB  
+- **Deployment:** Vercel / Netlify (optional)  
+- **Other Tools:** Cron Jobs, EmailJS (or Nodemailer)  
 
-5. **Install the required fonts**
+---
 
-   The project requires the "font-inter" and "font-spaceGrotesk" fonts to be available. You can download them from [Google Fonts](https://fonts.google.com/).
+## 📜 License
 
-6. **Set up the environment variables**
-
-   The project requires the MONGODB_URI environment variable to be defined. You can do this in a `.env` file in the root of your project:
-
-   ```bash
-   MONGODB_URI=your_mongodb_uri
-   ```
-
-7. **Start the server**
-
-   Run the following command to start the server:
-
-   ```bash
-   npm run start
-   ```
-
-Now, you should be able to access the project at `http://localhost:3000`.
-
-Please note that the project requires the "m.media-amazon.com" domain to be accessible for image handling. If you are unable to access this domain, you may encounter issues with image loading.
+This project is licensed under the **MIT License**.
